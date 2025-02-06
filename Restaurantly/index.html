@@ -81,7 +81,8 @@
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
 
-        <a class="btn-book-a-table d-none d-xl-block" href="#book-a-table">Book a Table</a>
+        <a class="btn-book-a-table d-none d-xl-block" id="bookBtn">Book a Table</a>
+  
 
       </div>
 
@@ -924,6 +925,17 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  
+  <script>
+    document.getElementById("bookBtn").addEventListener("click", function() {
+      
+        let phoneNumber = "9867921876"; 
+        let message = "Hello, I would like to book an table.";
+        let encodedMessage = encodeURIComponent(message);
+        let whatsappLink = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+        window.location.href = whatsappLink;
+    });
+</script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
