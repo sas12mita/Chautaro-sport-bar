@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - Restaurantly Bootstrap Template</title>
+  <title>Chautaro Sports Bar</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -116,14 +116,9 @@
         <div class="contact-info d-flex align-items-center">
           <i class="bi bi-envelope d-flex align-items-center"><a
               href="mailto:contact@example.com">contact@example.com</a></i>
-          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+977 9861970156</span></i>
         </div>
-        <div class="languages d-none d-md-flex align-items-center">
-          <ul>
-            <li>En</li>
-            <li><a href="#">De</a></li>
-          </ul>
-        </div>
+        
       </div>
     </div><!-- End Top Bar -->
 
@@ -133,7 +128,7 @@
         <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
           <!-- Uncomment the line below if you also wish to use an image logo -->
           <!-- <img src="assets/img/logo.png" alt=""> -->
-          <h1 class="sitename">Restaurantly</h1>
+          <h1 class="sitename">Chautaro Sports Bar</h1>
         </a>
 
         <nav id="navmenu" class="navmenu">
@@ -169,11 +164,11 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 d-flex flex-column align-items-center align-items-lg-start">
-            <h2 data-aos="fade-up" data-aos-delay="100">Welcome to <span>Restaurantly</span></h2>
+            <h2 data-aos="fade-up" data-aos-delay="100">Welcome to <span>Chautaro Sports Bar</span></h2>
             <p data-aos="fade-up" data-aos-delay="200">Delivering great food for more than 18 years!</p>
             <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
               <a href="#menu" class="cta-btn">Our Menu</a>
-              <a href="#book-a-table" class="cta-btn">Book a Table</a>
+              <a href="#book-a-table" class="cta-btn" id="bookBtn">Book a Table</a>
             </div>
           </div>
           <div class="col-lg-4 d-flex align-items-center justify-content-center mt-5 mt-lg-0">
@@ -189,10 +184,10 @@
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4">
           <div class="col-lg-6 order-1 order-lg-2">
-            <img src="assets/img/about.jpg" class="img-fluid about-img" alt="Cautaro Sport Bar">
+            <img src="assets/img/about.jpg" class="img-fluid about-img" alt="Chautaro Sport Bar">
           </div>
           <div class="col-lg-6 order-2 order-lg-1 content">
-            <h3>Welcome to Cautaro Sport Bar – Where Passion Meets Flavor!</h3>
+            <h3>Welcome to Chautaro Sport Bar – Where Passion Meets Flavor!</h3>
             <p class="fst-italic">
               At **Cautaro Sport Bar**, we blend the thrill of sports with an unforgettable dining experience. Whether
               you're here to cheer for your favorite team or enjoy a laid-back evening with friends, we’ve got
@@ -249,7 +244,7 @@
                 <div class="card-item">
                   <span>03</span>
                   <h4><a href="" class="stretched-link">Exceptional Customer Service</a></h4>
-                  <p>>Our team is committed to providing a warm and welcoming dining experience with friendly staff and
+                  <p>Our team is committed to providing a warm and welcoming dining experience with friendly staff and
                     quick service, making you feel at home.</p>
                 </div>
               </div><!-- Card Item -->
@@ -1024,7 +1019,7 @@
       <!-- You can delete the links only if you've purchased the pro version. -->
       <!-- Licensing information: https://bootstrapmade.com/license/ -->
       <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      Designed by Chautaro Tech Group</a>
       <!-- </div> -->
     </div>
 
@@ -1049,7 +1044,7 @@
   <script>
     document.getElementById("bookBtn").addEventListener("click", function () {
 
-      let phoneNumber = "9867921876";
+      let phoneNumber = "9861970156";
       let message = "Hello, I would like to book an table.";
       let encodedMessage = encodeURIComponent(message);
       let whatsappLink = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
