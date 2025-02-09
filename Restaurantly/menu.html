@@ -2,235 +2,274 @@
 <html lang="en">
 
 <head>
-  <!-- Same head content as index.html -->
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Menu - Chautaro Sports Bar</title>
-  <!-- All meta tags, links, and scripts from index.html -->
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    .menu-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 20px;
+    }
+    .menu-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+    }
+    .menu-item:hover {
+        transform: scale(1.05);
+    }
+    .menu-image {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .menu-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        overflow: hidden;
+        width: 100%;
+        height: 0;
+        transition: .5s ease;
+    }
+    .menu-item:hover .menu-overlay {
+        height: 100%;
+    }
+    .menu-text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+</style>
 </head>
 
 <body class="menu-page">
 
-  <!-- Header (Same as index.html) -->
   <header id="header" class="header fixed-top">
-    <!-- Same header content as index.html -->
+
+    <div class="topbar d-flex align-items-center">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-envelope d-flex align-items-center"><a
+              href="mailto:contact@example.com">chautaroauto@gmail.com</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>9803921020</span></i>
+        </div>
+        
+      </div>
+    </div><!-- End Top Bar -->
+
+    <div class="branding d-flex align-items-cente">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <div class="logo-container">
+            <img src="assets/img/logo.png" alt="chautaro logo" class="logo-img">
+          </div>
+          <!-- <h1 class="sitename">Chautaro Sports Bar</h1> -->
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html" class="active">Home<br></a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="#specials">Specials</a></li>
+            <li><a href="#events">Events</a></li>
+
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <a class="btn-book-a-table d-none d-xl-block">Book a Table</a>
+
+
+      </div>
+
+    </div>
+
   </header>
 
-  <main class="main">
 
-    <!-- Menu Hero Section -->
-    <section id="menu-hero" class="menu-hero section dark-background">
-      <img src="assets/img/menu-hero-bg.jpg" alt="Menu Background" data-aos="fade-in">
+  <main class="main">
+    <section id="hero" class="hero section dark-background">
+
+      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
+
       <div class="container">
         <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 data-aos="fade-up">Chautaro Sports Bar Menu</h2>
-            <p data-aos="fade-up" data-aos-delay="200">Experience the Flavors of Nepal</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Menu Categories -->
-    <section id="menu-categories" class="menu-categories section">
-      <div class="container" data-aos="fade-up">
-
-        <!-- Category Navigation -->
-        <div class="row">
-          <div class="col-lg-3">
-            <div class="nav flex-column nav-pills menu-category-nav" id="v-pills-tab" role="tablist">
-              <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#appetizers">
-                <i class="bi bi-egg-fried"></i> Appetizers
-              </button>
-              <button class="nav-link" data-bs-toggle="pill" data-bs-target="#main-courses">
-                <i class="bi bi-basket"></i> Main Courses
-              </button>
-              <button class="nav-link" data-bs-toggle="pill" data-bs-target="#drinks">
-                <i class="bi bi-cup-straw"></i> Drinks
-              </button>
-              <button class="nav-link" data-bs-toggle="pill" data-bs-target="#specials">
-                <i class="bi bi-star"></i> Chef's Specials
-              </button>
-            </div>
-          </div>
-
-          <!-- Menu Items -->
-          <div class="col-lg-9">
-            <div class="tab-content">
-
-              <!-- Appetizers -->
-              <div class="tab-pane fade show active" id="appetizers">
-                <div class="row gy-4">
-                  
-                  <div class="col-md-6 menu-item" data-aos="fade-up">
-                    <div class="item-card">
-                      <img src="assets/img/menu/momo.jpg" class="img-fluid" alt="Steamed Momo">
-                      <div class="item-content">
-                        <h3>Steamed Momo <span class="price">Rs. 220</span></h3>
-                        <div class="item-meta">
-                          <span class="category">Vegetarian/Chicken/Buff</span>
-                          <div class="rating">
-                            <i class="bi bi-star-fill"></i> 4.8
-                          </div>
-                        </div>
-                        <p>Traditional Nepalese dumplings served with spicy tomato chutney</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- More appetizer items... -->
-
-                </div>
-              </div>
-
-              <!-- Main Courses -->
-              <div class="tab-pane fade" id="main-courses">
-                <div class="row gy-4">
-                  
-                  <div class="col-md-6 menu-item" data-aos="fade-up">
-                    <div class="item-card">
-                      <img src="assets/img/menu/thakali-thali.jpg" class="img-fluid" alt="Thakali Thali">
-                      <div class="item-content">
-                        <h3>Thakali Thali <span class="price">Rs. 450</span></h3>
-                        <div class="item-meta">
-                          <span class="category">Traditional Set</span>
-                          <div class="rating">
-                            <i class="bi bi-star-fill"></i> 4.9
-                          </div>
-                        </div>
-                        <p>Authentic Nepalese meal with rice, lentils, seasonal vegetables, pickles, and meat curry</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- More main course items... -->
-
-                </div>
-              </div>
-
-              <!-- Drinks -->
-              <div class="tab-pane fade" id="drinks">
-                <div class="row gy-4">
-                  
-                  <div class="col-md-6 menu-item" data-aos="fade-up">
-                    <div class="item-card">
-                      <img src="assets/img/menu/chang.jpg" class="img-fluid" alt="Local Chang">
-                      <div class="item-content">
-                        <h3>Local Chang <span class="price">Rs. 300</span></h3>
-                        <div class="item-meta">
-                          <span class="category">Fermented Beverage</span>
-                          <div class="rating">
-                            <i class="bi bi-star-fill"></i> 4.7
-                          </div>
-                        </div>
-                        <p>Traditional Himalayan fermented rice/millet beer served in wooden mug</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- More drink items... -->
-
-                </div>
-              </div>
-
+          <div class="col-lg-8 d-flex flex-column align-items-center align-items-lg-start">
+            <h2 data-aos="fade-up" data-aos-delay="100">Welcome to <span>Chautaro Sports Bar</span></h2>
+            <p data-aos="fade-up" data-aos-delay="200">  <span>Where great food meets sports excitement!
+            </span></p>
+            <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
+              <a href="#menu" class="cta-btn">Our Menu</a>
+              <a href="#book-a-table" class="cta-btn">Book a Table</a>
             </div>
           </div>
         </div>
-
       </div>
-    </section>
 
-    <!-- Special Offers Banner -->
-    <section class="special-offers section dark-background">
-      <div class="container text-center" data-aos="fade-up">
-        <h3>Daily Special Offers</h3>
-        <div class="row">
-          <div class="col-md-4 offer" data-aos="zoom-in">
-            <div class="offer-card">
-              <h4>Happy Hour</h4>
-              <p>4-7 PM Daily</p>
-              <p class="highlight">50% Off on All Drinks</p>
-            </div>
+    </section><!-- /Hero Section -->
+
+    <main class="main">
+      <section id="menu" class="menu section">
+          <div class="container section-title" data-aos="fade-up">
+              <h2>Our Menu</h2>
+              <p>Delicious Offerings at Chautaro Sports Bar</p>
           </div>
-          <!-- More offers... -->
+          <div class="container" data-aos="fade-up" data-aos-delay="100">
+              <div class="menu-gallery">
+                  <div class="menu-item">
+                      <img src="assets/img/menu1.jpg" alt="Menu Page 1" class="menu-image">
+                      <div class="menu-overlay">
+                          <div class="menu-text">Main Course</div>
+                      </div>
+                  </div>
+                  <div class="menu-item">
+                      <img src="assets/img/menu1.jpg" alt="Menu Page 2" class="menu-image">
+                      <div class="menu-overlay">
+                          <div class="menu-text">Appetizers</div>
+                      </div>
+                  </div>
+                  <div class="menu-item">
+                      <img src="assets/img/menu1.jpg" alt="Menu Page 3" class="menu-image">
+                      <div class="menu-overlay">
+                          <div class="menu-text">Desserts</div>
+                      </div>
+                  </div>
+                  <div class="menu-item">
+                      <img src="assets/img/menu4.jpg" alt="Menu Page 4" class="menu-image">
+                      <div class="menu-overlay">
+                          <div class="menu-text">Drinks</div>
+                      </div>
+                  </div>
+                  <!-- Add more menu items as needed -->
+              </div>
+          </div>
+      </section>
+
+</main>
+
+<footer id="footer" class="footer">
+  <div class="container footer-top">
+    <div class="row gy-4">
+      <div class="col-lg-3 col-md-6 footer-logo">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <img src="assets/img/logo.png" alt="Chautaro Sports Bar Logo" class="footer-logo-img">
+        </a>
+      </div>
+
+      <div class="col-lg-3 col-md-6 footer-about">
+        <h4>About Us</h4>
+        <p>Chautaro Sports Bar - Where great food meets sports excitement!</p>
+        <div class="footer-contact pt-3">
+          <p>Nayabazar, Kathmandu-16</p>
+          <p class="mt-3"><strong>Phone:</strong> <span>9803921020</span></p>
+          <p><strong>Email:</strong> <span>chautaroauto@gmail.com</span></p>
         </div>
       </div>
-    </section>
 
-  </main>
+      <div class="col-lg-3 col-md-6 footer-links">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Terms of service</a></li>
+          <li><a href="#">Privacy policy</a></li>
+        </ul>
+      </div>
 
-  <!-- Footer (Same as index.html) -->
-  <footer id="footer" class="footer">
-    <!-- Same footer content as index.html -->
-  </footer>
+      <div class="col-lg-3 col-md-6 footer-social">
+        <h4>Follow Us</h4>
+        <div class="social-links d-flex mt-4">
+          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="tiktok"><i class="bi bi-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <!-- Same scripts as index.html -->
+  <div class="container copyright text-center mt-4">
+    <p>© <span>Copyright</span> <strong class="px-1 sitename">Chautaro Sports Bar</strong> <span>All Rights Reserved</span></p>
+    <p>Designed by Chautaro Tech Group</p>
+  </div>
+</footer>
 
-  <style>
-    .menu-category-nav .nav-link {
-      background: #1a1814;
-      color: #fff;
-      margin-bottom: 10px;
-      border-radius: 5px;
-      transition: all 0.3s ease;
-    }
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
-    .menu-category-nav .nav-link.active {
-      background: #cda45e;
-      color: #000;
-    }
+  <!-- Preloader -->
+  <div id="preloader"></div>
 
-    .item-card {
-      background: #1a1814;
-      border-radius: 10px;
-      overflow: hidden;
-      transition: transform 0.3s ease;
-    }
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-    .item-card:hover {
-      transform: translateY(-5px);
-    }
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
 
-    .item-content {
-      padding: 20px;
-    }
 
-    .item-content h3 {
-      font-family: 'Playfair Display', serif;
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 10px;
-    }
 
-    .price {
-      color: #cda45e;
-      font-weight: 700;
-    }
+  <script>
+    document.querySelectorAll('.menu-item').forEach(item => {
+        item.addEventListener('click', () => {
+            const img = item.querySelector('img');
+            const lightbox = document.createElement('div');
+            lightbox.id = 'lightbox';
+            document.body.appendChild(lightbox);
 
-    .item-meta {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 10px;
-      font-size: 0.9rem;
-    }
+            const lightboxImg = document.createElement('img');
+            lightboxImg.src = img.src;
+            lightbox.appendChild(lightboxImg);
 
-    .rating {
-      color: #ffd700;
-    }
-
-    .special-offers .offer-card {
-      background: #cda45e;
-      padding: 20px;
-      border-radius: 10px;
-      margin: 10px;
-    }
-
-    .highlight {
-      font-weight: 700;
-      font-size: 1.2rem;
-      color: #1a1814;
-    }
-  </style>
-
+            lightbox.addEventListener('click', e => {
+                if (e.target !== e.currentTarget) return;
+                lightbox.remove();
+            });
+        });
+    });
+</script>
 </body>
+
 </html>
