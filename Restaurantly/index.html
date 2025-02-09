@@ -145,7 +145,7 @@
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
 
-        <a class="btn-book-a-table d-none d-xl-block" id="bookBtn">Book a Table</a>
+        <a class="btn-book-a-table d-none d-xl-block bookBtn" >Book a Table</a>
 
 
       </div>
@@ -168,7 +168,7 @@
             <p data-aos="fade-up" data-aos-delay="200">Delivering great food for more than 18 years!</p>
             <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
               <a href="#menu" class="cta-btn">Our Menu</a>
-              <a href="#book-a-table" class="cta-btn" id="bookBtn">Book a Table</a>
+              <a href="#book-a-table" class="cta-btn bookBtn">Book a Table</a>
             </div>
           </div>
           <div class="col-lg-4 d-flex align-items-center justify-content-center mt-5 mt-lg-0">
@@ -242,7 +242,7 @@
 
               <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
                 <div class="card-item">
-                  <span>03</span>
+                  <span>02</span>
                   <h4><a href="" class="stretched-link">Exceptional Customer Service</a></h4>
                   <p>Our team is committed to providing a warm and welcoming dining experience with friendly staff and
                     quick service, making you feel at home.</p>
@@ -252,7 +252,7 @@
 
               <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
                 <div class="card-item">
-                  <span>02</span>
+                  <span>03</span>
                   <h4><a href="" class="stretched-link">Affordable & Value for Money</a></h4>
                   <p>We offer delicious meals at affordable prices without compromising on quality, making fine dining
                     accessible to everyone.</p>
@@ -1042,14 +1042,17 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
   <script>
-    document.getElementById("bookBtn").addEventListener("click", function () {
+    const bookButtons = document.querySelectorAll(".bookBtn"); // Select all elements with class "bookBtn"
 
-      let phoneNumber = "9861970156";
-      let message = "Hello, I would like to book an table.";
-      let encodedMessage = encodeURIComponent(message);
-      let whatsappLink = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-      window.location.href = whatsappLink;
-    });
+bookButtons.forEach(button => { // Add the event listener to each button
+  button.addEventListener("click", function () {
+    let phoneNumber = "9861970156";
+    let message = "Hello, I would like to book a table.";
+    let encodedMessage = encodeURIComponent(message);
+    let whatsappLink = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    window.location.href = whatsappLink;
+  });
+});
   </script>
 
   <!-- Main JS File -->
